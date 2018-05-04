@@ -20,7 +20,7 @@ schedule.scheduleJob('00  */5  *  *  *  *', function () {
         time: new Date()
       }};
       
-      yield CmcModel.update(conditions, update, function(error) {
+      CmcModel.update(conditions, update, function(error) {
           if(error) {
               console.log(error);
           } else {
