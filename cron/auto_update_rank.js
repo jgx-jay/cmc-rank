@@ -28,10 +28,12 @@ schedule.scheduleJob('00  */5  *  *  *  *', function () {
           }
       });
 
-      // var id = yield db.insertAsync(
-      //     'insert into cmc set cache_data = ?, last_update_at = now()',
-      //     [cacheData]
-      // )
+      /*
+      var id = yield db.insertAsync(
+          'insert into cmc set cache_data = ?, last_update_at = now()',
+          [cacheData]
+      )
+      */
 
     } catch(err) {
       console.log('failed ' + err.message);

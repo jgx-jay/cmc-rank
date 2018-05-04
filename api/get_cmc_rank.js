@@ -24,15 +24,17 @@ module.exports = function *() {
     result.status = 1;
     result.data.list = JSON.parse(dbRow.data);
   }
-  
-  // var row = yield db.selectOneAsync(
-  //   'select * from cmc order by id desc limit 1'
-  // );
 
-  // if (row) {
-  //   result.status = 1;
-  //   result.data.list = JSON.parse(row.cache_data);
-  // }
+  /*
+  var row = yield db.selectOneAsync(
+    'select * from cmc order by id desc limit 1'
+  );
+
+  if (row) {
+    result.status = 1;
+    result.data.list = JSON.parse(row.cache_data);
+  }
+  */
 
   return result;
 }
