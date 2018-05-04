@@ -14,7 +14,7 @@ module.exports = function *() {
 
   var dbRow = yield CmcModel.findOne({
     'name': 'cmc_rank'
-  }, function (error, docs) {
+  }, (error, docs) => {
     if(error) {
         console.log(error);
     }

@@ -7,7 +7,7 @@ var CmcModel = require('../model/cmc_rank');
 
 // var db = new MysqlLib();
 
-schedule.scheduleJob('00  */5  *  *  *  *', function () { 
+schedule.scheduleJob('00  */5  *  *  *  *', () => { 
   co(function *() {
 
     try {
@@ -20,7 +20,7 @@ schedule.scheduleJob('00  */5  *  *  *  *', function () {
         time: new Date()
       }};
       
-      CmcModel.update(conditions, update, function(error) {
+      CmcModel.update(conditions, update, (error) => {
           if(error) {
               console.log(error);
           } else {
