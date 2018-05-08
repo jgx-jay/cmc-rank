@@ -5,7 +5,7 @@ var CmcRankSchema = new Mongoose.Schema({
   name: {type: String},
   data: {type: String},
   time: {type: String}
-});
+}, {collection: 'CmcRank'});
 
 var model = Mongoose.model('CmcRank', CmcRankSchema);
 
